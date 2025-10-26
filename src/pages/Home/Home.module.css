@@ -1,0 +1,161 @@
+/* Home Container Styles */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.homeContainer.paginationMode {
+  background: linear-gradient(135deg, #e1e9fe 0%, #d4e2fe 100%);
+}
+
+.homeContainer.infiniteMode {
+  background: linear-gradient(135deg, #e8f5e8 0%, #ddeedd 100%);
+}
+
+/* Header Section */
+.headerSection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lightningIcon {
+  font-size: 48px;
+  color: #f39c12;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.contentArea {
+  flex: 1;
+}
+
+/* Home View Styles */
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+.loadMoreSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.loadMoreButton {
+  min-width: 150px;
+}
+
+.pageInfo {
+  text-align: center;
+  color: #6c757d;
+  font-size: 14px;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.pageInfo p {
+  margin: 0;
+}
+
+.endMessage {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homeContainer {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .lightningIcon {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}

@@ -1,5 +1,12 @@
+import { QueryProvider } from "./context/QueryClientProvider";
+import AppRouter from "./routes/AppRouter";
+
 function App() {
-  return <></>;
+  return (
+    <QueryProvider>
+      <AppRouter />
+    </QueryProvider>
+  );
 }
 
 export default App;

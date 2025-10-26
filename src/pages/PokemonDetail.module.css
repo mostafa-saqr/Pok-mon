@@ -1,0 +1,401 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.backButtonContainer {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backIcon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  padding: 30px;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+
+.lightningIcon {
+  font-size: 24px;
+  color: white;
+}
+
+.headerText {
+  text-align: center;
+}
+
+.pokemonName {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.pokemonNumber {
+  font-size: 18px;
+  color: white;
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageContainer {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.pokemonImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.typeBadge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.physicalDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.physicalItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.icon {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.physicalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Right Column */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+}
+
+/* Stats */
+.statsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statName {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.statBar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.statBarFill {
+  height: 100%;
+  border-radius: 4px;
+  background: #2c3e50;
+  transition: width 0.3s ease;
+}
+
+/* Abilities */
+.abilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.abilityItem {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  border: 1px solid #e9ecef;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.abilityName {
+  font-size: 14px;
+  color: #2c3e50;
+  text-transform: capitalize;
+}
+
+.hiddenLabel {
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+  margin-left: 4px;
+}
+
+/* Experience */
+.experienceValue {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+/* Loading and Error States */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+/* Skeleton Styles */
+.headerSkeleton {
+  padding: 30px;
+  background: linear-gradient(135deg, #8e44ad, #e74c3c);
+}
+
+.headerContentSkeleton {
+  height: 60px;
+}
+
+.mainContentSkeleton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.leftColumnSkeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageSkeleton {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.typeBadgeSkeleton {
+  width: 100px;
+  height: 32px;
+  border-radius: 20px;
+}
+
+.physicalDetailsSkeleton {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+}
+
+.rightColumnSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.statsSectionSkeleton {
+  height: 200px;
+  border-radius: 8px;
+}
+
+.abilitiesSectionSkeleton {
+  height: 100px;
+  border-radius: 8px;
+}
+
+.experienceSectionSkeleton {
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .pokemonName {
+    font-size: 24px;
+  }
+
+  .pokemonNumber {
+    font-size: 16px;
+  }
+
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .physicalDetails {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .physicalItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .mainContentSkeleton {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+}
